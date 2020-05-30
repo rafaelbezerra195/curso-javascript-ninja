@@ -47,13 +47,13 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 var carro = {
-    marca: '',
-    modelo: '',
-    placa: '',
-    ano: 0,
-    cor: '',
-    quantasPortas: 0,
-    assentos: 0,
+    marca: 'Fiat',
+    modelo: 'Uno',
+    placa: 'HUV-5665',
+    ano: 2001,
+    cor: 'Azul',
+    quantasPortas: 2,
+    assentos: 5,
     quantidadePessoas: 0
 }
 
