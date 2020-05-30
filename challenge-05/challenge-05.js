@@ -14,7 +14,7 @@ var getAr = function (ar){
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-getAr(ar)[1] //2
+console.log(getAr(ar)[1]) //2
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -35,11 +35,11 @@ var arDifferentTypes = [1,'',true,1.567,5]
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-getArByIndex(arDifferentTypes,0);
-getArByIndex(arDifferentTypes,1);
-getArByIndex(arDifferentTypes,2);
-getArByIndex(arDifferentTypes,3);
-getArByIndex(arDifferentTypes,4);
+console.log(getArByIndex(arDifferentTypes,0));
+console.log(getArByIndex(arDifferentTypes,1));
+console.log(getArByIndex(arDifferentTypes,2));
+console.log(getArByIndex(arDifferentTypes,3));
+console.log(getArByIndex(arDifferentTypes,4));
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -57,17 +57,17 @@ os livros.
 */
 var book = function(bookName){
     var livros = {
-        senhorDosAneis: {
+        'Senhor dos Aneis': {
             quantidadePaginas: 1,
             autor: 'Tolkien',
             editora: 'Sextante'
         },
-        GeloEFogo: {
+        'Gelo e Fogo': {
             quantidadePaginas: 1,
             autor: 'Martin',
             editora: 'Arqueiro'
         },
-        Inferno: {
+        'Inferno': {
             quantidadePaginas: 1,
             autor: 'Dan Brown',
             editora: 'Rocco'
@@ -81,25 +81,27 @@ var book = function(bookName){
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-book();
+console.log(book());
+
+var bookName = 'Senhor dos Aneis';
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-`O livro Senhor dos Aneis tem ${book('senhorDosAneis').quantidadePaginas} páginas`;
+console.log(`O livro ${bookName} tem ${book(bookName).quantidadePaginas} páginas`);
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-`O autor do livro Senhor dos Aneis é ${book('senhorDosAneis').autor}`;
+console.log(`O autor do livro ${bookName} é ${book(bookName).autor}`);
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-`O livro Senhor dos Aneis foi publicado pela editora ${book('senhorDosAneis').editora}`;
+console.log(`O livro ${bookName} foi publicado pela editora ${book(bookName).editora}`);
