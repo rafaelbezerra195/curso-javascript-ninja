@@ -33,9 +33,7 @@ function showName(){
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-var varShowName = function showName(){
-  return 'Rafeal';
-};
+var varShowName = showName;
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
@@ -65,6 +63,7 @@ function calculator(operacao){
       case '*': result = a * b; break;
       case '/': result = a / b; break;
       case '%': result = a % b; break;
+      default: return 'Operação inválida.';
     }
 
     return `Resultado da operação: ${a} ${operacao} ${b} = ${result}.`
@@ -75,25 +74,12 @@ function calculator(operacao){
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-var sum = function calculator(operacao){
-  return function(a,b){
-    var result;
-    switch (operacao){
-      case '+': result = a + b; break;
-      case '-': result = a - b; break;
-      case '*': result = a * b; break;
-      case '/': result = a / b; break;
-      case '%': result = a % b; break;
-    }
-
-    return `Resultado da operação: ${a} ${operacao} ${b} = ${result}.`
-  }
-};
+var sum = calculator('+');
 
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
-console.log(sum('+')(1,2));
+console.log(sum(1,2));
 
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
